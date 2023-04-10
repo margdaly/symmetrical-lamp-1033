@@ -1,0 +1,12 @@
+<h1>All Items Indedx</h1>
+
+<% @items.each do |item| %>
+  <div id="items-<%= item.id %>">
+  <p>name: <%= item.name %></p>
+  <p>price: <%= item.price %></p>
+  <p>supermarket: <%= item.supermarket_name %></p>
+  <p>number of customers who bought this item: <%= item.customer_count %></p>
+  <br>
+  </div>
+<% end %>
+ 

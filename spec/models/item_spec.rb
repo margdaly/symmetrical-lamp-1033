@@ -19,5 +19,22 @@ RSpec.describe Item, type: :model do
         expect(@cheese.supermarket_name).to eq(@wholefood.name)
       end
     end
+
+    describe ".customer_count" do
+      it "returns the number of customers that have bought this item" do
+        expect(@apple.customer_count).to eq(1)
+        expect(@mango.customer_count).to eq(1)
+
+        CustomerItem.create!(customer_id: @sue.id, item_id: @apple.id)
+        CustomerItem.create!(customer_id: @frank.id, item_id: @apple.id)
+        CustomerItem.create!(customer_id: @bob.id, item_id: @apple.id)
+
+        CustomerItem.create!(customer_id: @bob.id, item_id: @mango.id)
+        CustomerItem.create!(customer_id: @sue.id, item_id: @mango.id)
+
+        expect(@apple.customer_count).to eq(4)
+        expect(@mango.customer_count).to eq(3)
+      end
+    end
   end
 end
