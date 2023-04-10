@@ -24,6 +24,7 @@ When you run `bundle exec rspec` you should have 2 passing tests.
 * Push your code to your fork **once the time is up (not before!)**
 * The use of scaffolding is not permitted on this assessment. 
 
+
 ## Submission
 
 **Once the time for the assessment is up**, push your code to your fork and create a pull request to the `turingschool-examples` repository. Include the following:
