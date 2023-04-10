@@ -8,7 +8,7 @@ Supermarket.delete_all
 @wholefood = Supermarket.create!(name: "Whole Foods", location: "So. Broadway")
 
 @oats = @safeway.items.create!(name: "Oats", price: 3)
-@rice = @safeway.items.create!(name: "Oats", price: 2)
+@rice = @safeway.items.create!(name: "Rice", price: 2)
 
 @pear = @kings.items.create!(name: "Pear", price: 2)
 @apple = @kings.items.create!(name: "Apple", price: 1)
